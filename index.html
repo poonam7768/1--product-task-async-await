@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product task with async-await</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-dark">
+    <h2 class="bg-dark text-center text-white">Product Details Form!!!</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mt-4">
+                    <div class="card-header bg-dark text-white">
+                        <h3>Form..!</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="productform">
+                            <div class="form-group">
+                                <label for="productname">Enter product Name:</label>
+                                <input required type="text" id="productname" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="productprice">Enter Price:</label>
+                                <input required type="text" id="productprice" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="productcategory">Enter Category:</label>
+                                <input required type="text" id="productcategory" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="productquantity">Enter Qunantity:</label>
+                                <input required type="text" id="productquantity" class="form-control">
+                            </div>
+
+                                <button type="submit" id="addbtn" class="btn btn-sm btn-success">Add</button>
+                                <button type="button" id="updatebtn" class="btn btn-sm btn-success d-none">Update</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <table class="table table-bordered text-center mt-4 bg-white">
+                    <thead>
+                        <tr>
+                            <th>sr.no.</th>
+                            <th> product Name</th>
+                            <th> product price</th>
+                            <th> product category</th>
+                            <th> product quantity</th>
+                            <th> Edit</th>
+                            <th> Delete</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="productcontainer">
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>Laptop</td>
+                            <td>55000</td>
+                            <td>Electronics</td>
+                            <td>4</td>
+                            <td><button class="btn">Edit</button></td>
+                            <td><button class="btn">Delete</button></td>
+                        </tr> -->
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+<div class="spinner d-none" id="spinner">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+   </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
